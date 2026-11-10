@@ -1,0 +1,1 @@
+"""ForecastGuard Streamlit application package."""

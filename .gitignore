@@ -1,0 +1,41 @@
+# Default PUBLIC release posture: source/docs only; review data rights separately.
+data/
+models/
+results/
+*.csv
+*.parquet
+*.feather
+*.joblib
+*.pkl
+*.pickle
+*.onnx
+*.zip
+
+# Local secrets and environment
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+secrets.toml
+*.key
+*.pem
+.venv/
+venv/
+env/
+
+# Python and notebooks
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Editors and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.log
