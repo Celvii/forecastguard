@@ -8,7 +8,7 @@ Python · LightGBM · Quantile Regression · Conformal Calibration · Streamlit
 ForecastGuard forecasts next-day product-level unit sales, estimates predictive uncertainty, and translates estimated demand quantiles into illustrative order-up-to targets. The project focuses on whether a model improves **decisions**, not just conventional point-forecast accuracy.
 
 **Repository:** [github.com/Celvii/forecastguard](https://github.com/Celvii/forecastguard)  
-**Live research demo:** _Add the Streamlit URL here after deployment._
+**Live research demo:** (https://forecastguard-celvii.streamlit.app/)
 
 ## Dashboard preview
 
