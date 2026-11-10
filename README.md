@@ -7,8 +7,16 @@ Python · LightGBM · Quantile Regression · Conformal Calibration · Streamlit
 
 ForecastGuard forecasts next-day product-level unit sales, estimates predictive uncertainty, and translates estimated demand quantiles into illustrative order-up-to targets. The project focuses on whether a model improves **decisions**, not just conventional point-forecast accuracy.
 
-**Portfolio demo:** [Add the deployed URL after deployment]  
-**Project screenshot:** Add a screenshot from the dashboard to `docs/dashboard-preview.png`, after checking that it contains no local paths or personal information.
+**Repository:** [github.com/Celvii/forecastguard](https://github.com/Celvii/forecastguard)  
+**Live research demo:** _Add the Streamlit URL here after deployment._
+
+## Dashboard preview
+
+![ForecastGuard full research dashboard: historical backtest overview](docs/images/dashboard-overview.png)
+*Full local research dashboard showing aggregate historical simulation results. This is not the limited public demo.*
+
+![ForecastGuard interval reliability evaluation: raw versus calibrated coverage](docs/images/interval-reliability.png)
+*Historical empirical prediction-interval evaluation; not a guarantee of future coverage.*
 
 ## Results at a glance
 
@@ -88,6 +96,12 @@ models/          LOCAL ONLY — fitted serialized artifacts
 results/         LOCAL ONLY — row-level historical forecasts/exports
 ```
 
+## Public research companion
+
+`public_demo/streamlit_app.py` is an **aggregate-results-only** Streamlit companion. It is intentionally less interactive than the six-tab local research app and requires neither Walmart sales files nor saved ML artifacts. Deploy it from this same GitHub repository with branch `main` and entrypoint `public_demo/streamlit_app.py`. Its dependencies live in `public_demo/requirements.txt`.
+
+See [final release and deployment instructions](docs/FINAL_RELEASE.md) for exact steps.
+
 ## Local research setup
 
 The original raw files must be obtained under the dataset's applicable competition rules. This repository does **not** redistribute them. Put `calendar.csv`, `sales_train_evaluation.csv`, and `sell_prices.csv` in `data/raw/`. Run the product-extraction notebook (`05_Product_Level_Forecasting.ipynb`) to create `data/selected_product_sales.csv` before using the reusable pipeline.
@@ -131,9 +145,11 @@ The M5 Kaggle dataset page describes its license as **“Subject to Competition 
 - [Technical methodology and results](docs/TECHNICAL_REPORT.md)
 - [Model card](docs/MODEL_CARD.md)
 - [Publication and deployment checklist](docs/PUBLICATION_CHECKLIST.md)
+- [Final release and deployment](docs/FINAL_RELEASE.md)
+- [Portfolio descriptions](docs/PORTFOLIO_COPY.md)
 
 ## Status
 
 **Completed locally:** feature pipeline, quantile forecasts, inventory simulation, rolling backtests, per-product interval calibration, tests, and six-tab Streamlit dashboard.  
-**Release verification pending:** the user has not yet provided Phase 17 audit output or an independently checked public deployment result.  
-**Public hosting:** not claimed until a deployed URL is tested.
+**Publication status:** GitHub push reported successful; publication preflight reports no obviously restricted tracked data/model paths. Phase 17 audit completion and live Streamlit deployment must still be verified.  
+**Status:** Core research and engineering complete; publication polish in progress.
